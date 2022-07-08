@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        /* .column {
+            float: left;
+            width: 50%;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        } */
+        /* Split the screen in half */
+        
+        @media only screen and (max-width: 600px) {
+            h2 {
+                margin-left: 10%;
+                text-align: center;
+            }
+            table {
+                margin-left: 20%;
+                border-spacing: 0 1em;
+            }
+            #submit {
+                margin-left: 100%;
+                background-color: #008CBA;
+                color: white;
+                height: 30px;
+                width: 100px;
+                border-radius: 10px;
+            }
+        }
+        
+        @media only screen and (min-width: 600px) {
+            body {
+                padding: 50px;
+            }
+            h2 {
+                text-align: center;
+            }
+            table {
+                margin-left: 40%;
+                border-spacing: 0 1em;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #submit {
+                margin-left: 100%;
+                background-color: #008CBA;
+                color: white;
+                height: 30px;
+                width: 100px;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <form action="resume.php" method="post">
+        <div class="split left">
+            <div class="centered">
+                <table>
+                    <div class="column">
+                        <tr>
+                            <td><label for="Name">Your Name</label></td>
+                            <td><input type="text" name="name" placeholder="enter your name" value="" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone No.">Your Contact Number</label>
+                                <td><input type="text" name='phone' placeholder="enter your phone number" value="" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Address">Your Address</label></td>
+                            <td><input type="text" name="address" placeholder="enter your Address" value="" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Linkedin">LinkedIn Link</label></td>
+                            <td><input type="link" name="linkedin" placeholder="enter your LinkedIn Link" value="" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="github">Github Link</label></td>
+                            <td><input type="link" name="github" placeholder="enter your github link" value="" required></td>
+                        </tr>
+                    </div>
+                </table>
+            </div>
+        </div>
+
+        <div class="split right">
+            <div class="centered">
+                <table>
+                    <div class="column">
+                        <tr>
+                            <td><label for="email">Email</label></td>
+                            <td><input type="email" name="email" placeholder="enter your email" value="" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="bio">bio</label></td>
+                            <td><input type="text" name="bio" placeholder="enter bio" value="" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="work">Work Experience</label></td>
+                            <td><input type="text" name="work" placeholder="enter your work experience" value="" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="academics">academics</label></td>
+                            <td><input type="text" name="academics" placeholder="enter your academics" value="" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="photo">Upload your photo</label></td>
+                            <td><input type="file" name="photo" id="photo" class="photo" value=""></td>
+                        </tr>
+                    </div>
+                </table>
+            </div>
+        </div>
+        <tr>
+            <td><input type="submit" name="submit" value="submit"></td>
+        </tr>
+    </form> -->
+    <div>
+
+        <form action="./resume.php" method="post" enctype="multipart/form-data">
+            <h2>Enter your details here to make resume</h2>
+            <table>
+                <tr>
+                    <td><label for="email">Enter Your Registered Email</label></td>
+                    <td><input type="email" name="loginEmail" placeholder="enter your Registered email" value="" required></td>
+                </tr>
+                <tr>
+                    <td><label for="Name">Your Name</label></td>
+
+                    <td><input type="text" name="name" placeholder="enter your name" value="" required></td>
+                </tr>
+                <tr>
+                    <td><label for="job">Apply for Job role</label></td>
+
+                    <td><input type="text" name="title" placeholder="enter for which role you applying for?" value="" required></td>
+                </tr>
+                <tr>
+                    <td><label for="phone No.">Your Contact Number</label>
+                        <td><input type="text" name='phone' placeholder="enter your phone number" value="" required></td>
+                </tr <tr>
+                <td><label for="dob">Your Date Of Birth</label>
+                    <td><input type="text" name='dob' placeholder="enter your date of birth" value="" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Address">Your Address</label></td>
+                        <td><input type="text" name="address" placeholder="enter your Address" value="" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Linkedin">LinkedIn Link</label></td>
+                        <td><input type="link" name="linkedin" placeholder="enter your LinkedIn Link" value="" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="github">Github Link</label></td>
+                        <td><input type="link" name="github" placeholder="enter your github link" value="" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" name="email" placeholder="enter your email" value="" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="bio">Introduction</label></td>
+                        <td><textarea type="text" name="bio" placeholder="enter Introduction" rows="5" value="" required></textarea></td>
+                    </tr>
+
+                    <!--work experience 1 start part-->
+                    <tr>
+                        <td><label for="work">Your 1st work starting date</label></td>
+                        <td><input type="text" name="work_1_start_date" placeholder="enter your 1st work starting date" value=""></input>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="work">Your 1st work ending date</label></td>
+                        <td><input type="text" name="work_1_end_date" placeholder="enter your work experience" value=""></input>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="work">Your 1st working Company Name</label></td>
+                        <td><input type="text" name="work_1_company" placeholder="enter your 1st working Company Name" value=""></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="work">Your 1st working Job role</label></td>
+                        <td><input type="text" name="work_1_role" placeholder="enter Your 1st working Job role" value=""></input>
+                        </td>
+                    </tr>
+
+                    <!--work experience 1 end part-->
+
+
+                    <!--work experience 2 start part-->
+                    <tr>
+                        <td><label for="work">Your 2nd work starting date</label></td>
+                        <td><input type="text" name="work_2_start_date" placeholder="enter your 2nd work starting date" value=""></input>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="work">Your 2nd work ending date</label></td>
+                        <td><input type="text" name="work_2_end_date" placeholder="enter your work experience" value=""></input>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="work">Your 2nd working Company Name</label></td>
+                        <td><input type="text" name="work_2_company" placeholder="enter your 2nd working Company Name" value=""></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="work">Your 2nd working Job role</label></td>
+                        <td><input type="text" name="work_2_role" placeholder="enter Your 2nd working Job role" value=""></input>
+                        </td>
+                    </tr>
+
+                    <!--work experience 2 end part-->
+
+
+                    <!--school starting -->
+
+
+                    <tr>
+                        <td><label for="school">Senior Secondary Qualification Starting Year</label></td>
+                        <td><input type="text" name="school_start_date" placeholder="enter your Senior Secondary Qualification Starting Year" value="" required></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="school">Senior Secondary Qualification ending Year</label></td>
+                        <td><input type="text" name="school_end_date" placeholder="enter your Senior Secondary Qualification Starting Year" value="" required></input>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="school">Senior Secondary School Name</label></td>
+                        <td><input type="text" name="school_name" placeholder="enter your Senior Secondary School Name" value="" required></input>
+                        </td>
+                    </tr>
+                    <!--school ending-->
+                    <!--1st college starting -->
+
+
+                    <tr>
+                        <td><label for="college">Your First College  Starting Year</label></td>
+                        <td><input type="text" name="college_1_start_date" placeholder="enter Your First College  Starting Year" value="" required></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="college">Your First College  Ending Year</label></td>
+                        <td><input type="text" name="college_1_end_date" placeholder="enter Your First College  Ending Year" value="" required></input>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="college">Your 1st  college Name</label></td>
+                        <td><input type="text" name="college_1_name" placeholder="enter Your 1st  college Name" value="" required></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="college">enter Your 1st  college Course Name</label></td>
+                        <td><input type="text" name="college_1_course_name" placeholder="enter Your 1st  college Course Name" value="" required></input>
+                        </td>
+                    </tr>
+                    <!--1st college ending-->
+                    <!--2nd college starting -->
+
+
+                    <tr>
+                        <td><label for="college">Your 2nd College  Starting Year</label></td>
+                        <td><input type="text" name="college_2_start_date" placeholder="enter Your First College  Starting Year" value="" required></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="college">Your First 2nd  Ending Year</label></td>
+                        <td><input type="text" name="college_2_end_date" placeholder="enter Your First College  Ending Year" value="" required></input>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="college">Your 2nd  college Name</label></td>
+                        <td><input type="text" name="college_2_name" placeholder="enter Your 2nd  college Name" value="" required></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="college">enter Your 2nd  college Course Name</label></td>
+                        <td><input type="text" name="college_2_course_name" placeholder="enter Your 2nd  college Course Name" value="" required></input>
+                        </td>
+                    </tr>
+                    <!--2nd college ending-->
+
+                    <!--3rd college starting -->
+
+
+                    <tr>
+                        <td><label for="college">Your 3rd College  Starting Year</label></td>
+                        <td><input type="text" name="college_3_start_date" placeholder="enter Your First College  Starting Year" value="" required></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="college">Your 3rd College  Ending Year</label></td>
+                        <td><input type="text" name="college_3_end_date" placeholder="enter Your First College  Ending Year" value="" required></input>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="college">Your 3rd  college Name</label></td>
+                        <td><input type="text" name="college_3_name" placeholder="enter Your 3rd  college Name" value="" required></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="college">enter Your 3rd  college Course Name</label></td>
+                        <td><input type="text" name="college_3_course_name" placeholder="enter Your 3rd  college Course Name" value="" required></input>
+                        </td>
+                    </tr>
+                    <!--3rd college ending-->
+                    <!--Skills starting -->
+
+                    <tr>
+                        <td><label for="Skills">Your 1st Skills</label></td>
+                        <td><textarea type="text" name="skills_1" placeholder="enter Your 1st Skills" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="Skills">Your 2nd Skills</label></td>
+                        <td><textarea type="text" name="skills_2" placeholder="enter Your 2nd Skills" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td><label for="Skills">Your 3rd Skills</label></td>
+                        <td><textarea type="text" name="skills_3" placeholder="enter Your 3rd Skills" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="Skills">Your 4th Skills</label></td>
+                        <td><textarea type="text" name="skills_4" placeholder="enter Your 4th Skills" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="Skills">Your 5th Skills</label></td>
+                        <td><textarea type="text" name="skills_5" placeholder="enter Your 5th Skills" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+                    <!--Skills ending-->
+                    <!--Language starting -->
+
+                    <tr>
+                        <td><label for="Language">Your 1st Language</label></td>
+                        <td><textarea type="text" name="lang_1" placeholder="enter Your 1st Language" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="Language">Your 2nd Language</label></td>
+                        <td><textarea type="text" name="lang_2" placeholder="enter Your 2nd Language" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td><label for="Language">Your 3rd Language</label></td>
+                        <td><textarea type="text" name="lang_3" placeholder="enter Your 3rd Language" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+                    <!--Language ending-->
+                    <!--certificate starting -->
+                    <tr>
+                        <td><label for="certificate">Your 1st certificate  Completeion Date</label></td>
+                        <td><input type="text" name="certificate_1_date" placeholder="enter Your First certificate  Completeion Date" value="" required></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="certificate">Your 1st certificate  Name</label></td>
+                        <td><textarea type="text" name="certificate_1_name" placeholder="enter Your 1st certificate  Name" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="certificate">Your 2nd certificate  Completeion Date</label></td>
+                        <td><input type="text" name="certificate_2_date" placeholder="enter Your 2nd certificate  Completeion Date" value="" required></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="certificate">Your 2nd certificate  Name</label></td>
+                        <td><textarea type="text" name="certificate_2_name" placeholder="enter Your 2nd certificate  Name" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="certificate">Your 3rd certificate  Completeion Date</label></td>
+                        <td><input type="text" name="certificate_3_date" placeholder="enter Your 3rd certificate  Completeion Date" value="" required></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="certificate">Your 3rd certificate  Name</label></td>
+                        <td><textarea type="text" name="certificate_3_name" placeholder="enter Your 3rd certificate  Name" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+                    <!--certificate ending-->
+
+                    <!--Interest starting -->
+
+                    <tr>
+                        <td><label for="Interest">Your 1st Interest</label></td>
+                        <td><textarea type="text" name="interest_1" placeholder="enter Your 1st Interest" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="Interest">Your 2nd Interest</label></td>
+                        <td><textarea type="text" name="interest_2" placeholder="enter Your 2nd Interest" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td><label for="Interest">Your 3rd Interest</label></td>
+                        <td><textarea type="text" name="interest_3" placeholder="enter Your 3rd Interest" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+                    <!--Interest ending-->
+
+                    <!--1st Project starting -->
+
+
+                    <tr>
+                        <td><label for="Project">Your First Project  Completion Date</label></td>
+                        <td><input type="text" name="project_1_date" placeholder="enter Your First Project  Completion Date" value="" required></input>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td><label for="Project">Your 1st  Project Name</label></td>
+                        <td><input type="text" name="project_1_name" placeholder="enter Your 1st  Project Name" value="" required></input>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="Project">Your First Project  Features</label></td>
+                        <td><textarea type="text" name="project_1_feature" placeholder="enter Your First Project  Features" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="Project">Your First Project  OutCome</label></td>
+                        <td><textarea type="text" name="project_1_outcome" placeholder="enter Your First Project  Outcome" rows="5" value="" required></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="Project">enter Your 1st  Project Tools USed</label></td>
+                        <td><textarea type="text" name="project_1_tools_used" placeholder="enter Your 1st  Project Tools USed" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+                    <!--1st Project ending-->
+
+                    <!--2nd Project starting -->
+
+
+                    <tr>
+                        <td><label for="Project">Your 2nd Project  Completion Date</label></td>
+                        <td><input type="text" name="project_2_date" placeholder="enter Your 2nd Project  Completion Date" value="" required></input>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td><label for="Project">Your 2nd  Project Name</label></td>
+                        <td><input type="text" name="project_2_name" placeholder="enter Your 2nd  Project Name" value="" required></input>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="Project">Your 2nd Project  Features</label></td>
+                        <td><textarea type="text" name="project_2_feature" placeholder="enter Your 2nd Project  Features" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="Project">Your 2nd Project  OutCome</label></td>
+                        <td><textarea type="text" name="project_2_outcome" placeholder="enter Your 2nd Project  Outcome" rows="5" value="" required></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="Project">enter Your 2nd  Project Tools USed</label></td>
+                        <td><textarea type="text" name="project_2_tools_used" placeholder="enter Your 2nd  Project Tools USed" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+                    <!--2nd Project ending-->
+
+                    <!--3rd Project starting -->
+
+
+                    <tr>
+                        <td><label for="Project">Your 3rd Project  Completion Date</label></td>
+                        <td><input type="text" name="project_3_date" placeholder="enter Your 3rd Project  Completion Date" value="" required></input>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td><label for="Project">Your 3rd  Project Name</label></td>
+                        <td><input type="text" name="project_3_name" placeholder="enter Your 3rd  Project Name" value="" required></input>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="Project">Your 3rd Project  Features</label></td>
+                        <td><textarea type="text" name="project_3_feature" placeholder="enter Your 3rd Project  Features" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="Project">Your 3rd Project  OutCome</label></td>
+                        <td><textarea type="text" name="project_3_outcome" placeholder="enter Your 3rd Project  Outcome" rows="5" value="" required></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="Project">enter Your 3rd  Project Tools USed</label></td>
+                        <td><textarea type="text" name="project_3_tools_used" placeholder="enter Your 3rd  Project Tools USed" value="" rows="5" required></textarea>
+                        </td>
+                    </tr>
+                    <!--3rd Project ending-->
+
+                    <tr>
+                        <td><label for="photo">Upload your photo</label></td>
+                        <td><input type="file" name="photo" id="photo" class="photo" value="photo"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="submit" name="submit" value="submit" id="submit"></td>
+                    </tr>
+
+            </table>
+        </form>
+
+    </div>
+</body>
+
+</html>

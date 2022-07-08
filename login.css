@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, rgb(15, 12, 14), rgb(159, 159, 199));
+}
+
+.circle {
+    width: 150px;
+    position: absolute;
+    top: 12%;
+    left: 36%;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(rgb(163, 159, 159), rgb(73, 73, 83));
+}
+
+form {
+    position: relative;
+    top: 20%;
+    left: 40%;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 25px 20px 30px rgba(0, 0, 0, 0.431);
+}
+
+span {
+    height: 10%;
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.font {
+    color: rgba(255, 255, 255, 0.863);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cont {
+    height: 80%;
+    width: 90%;
+    margin: 0px auto;
+}
+
+.data {
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+    font-size: 1.3rem;
+    border: none;
+    height: 50px;
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 5px 10px;
+    color: white;
+    box-shadow: 5px 6px 30px rgba(0, 0, 0, 0.431);
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: rgb(29, 18, 23);
+}
+
+input[type="submit"] {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-left: 75px;
+    box-shadow: 5px 6px 30px rgba(0, 0, 0, 0.431);
+    background-color: rgb(61, 165, 128);
+    border: 1px solid azure;
+    font-weight: bold;
+}
+
+.forgot {
+    margin-top: 20%;
+    margin-left: 30%;
+    color: white;
+}
+
+.logo {
+    margin-left: 70%;
+    margin-top: -10%;
+}

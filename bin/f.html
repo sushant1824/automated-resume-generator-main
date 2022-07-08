@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./f.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form action="./resume.php" method="post" enctype="multipart/form-data" id="form1">
+            <h4>Enter Your Personal Details</h4>
+            <div class="left">
+                <img src="./img/user.png" alt="" width="100" height="150" srcset="">
+                <input type="file" name="photo" id="photo" class="photo" value="photo">
+            </div>
+
+            <div class="right">
+
+                <input type="email" name="loginEmail" placeholder="enter your Registered email" value="" required>
+                <input type="text" name="name" placeholder="enter your name" value="" required>
+                <input type="text" name="title" placeholder="enter for which role you applying for?" value="" required>
+                <input type="text" name='phone' placeholder="enter your phone number" value="" required>
+                <input type="text" name='dob' placeholder="enter your date of birth" value="" required>
+                <input type="text" name="address" placeholder="enter your Address" value="" required>
+                <input type="text" name="bio" placeholder="enter your Introduction" value="" required>
+                <input type="link" name="linkedin" placeholder="enter your LinkedIn Link" value="" required>
+                <input type="link" name="github" placeholder="enter your github link" value="" required>
+
+            </div>
+            <div class="btn-box">
+                <button type="button" id="next1">Next</button>
+            </div>
+        </form>
+
+        <form action="./resume.php" method="post" enctype="multipart/form-data" id="form2">
+            <h4>Enter Your Qualification</h4>
+            <div class="left">
+                <img src="./img/school.png" width="250" height="400" alt="">
+            </div>
+            <!--school starting -->
+            <div class="right">
+                <div class="year">
+                    <input type="text" name="school_start_date" placeholder="enter your XII Starting Year" value="" required> &nbsp;&nbsp;&nbsp;
+                    <span> - </span> &nbsp;&nbsp;&nbsp;
+                    <input type="text" name="school_end_date" placeholder="enter your XII ending Year" value="" required>
+
+                </div>
+                <input type="text" name="school_name" placeholder="enter your Senior Secondary School Name" value="" required>
+                <!--school ending-->
+                <!--1st college starting -->
+                <div class="year">
+                    <input type="text" name="college_1_start_date" placeholder="enter Your First College  Starting Year" value="" required> &nbsp;&nbsp;&nbsp;
+                    <span> - </span> &nbsp;&nbsp;&nbsp;
+                    <input type="text" name="college_1_end_date" placeholder="enter Your First College  Ending Year" value="" required>
+                </div>
+                <input type="text" name="college_1_name" placeholder="enter Your 1st  college Name" value="" required>
+                <input type="text" name="college_1_course_name" placeholder="enter Your 1st  college Course Name" value="" required>
+
+                <!--1st college ending-->
+                <!--2nd college starting -->
+                <div class="year">
+                    <input type="text" name="college_2_start_date" placeholder="enter Your First College  Starting Year" value="" required> &nbsp;&nbsp;&nbsp;
+                    <span> - </span> &nbsp;&nbsp;&nbsp;
+                    <input type="text" name="college_2_end_date" placeholder="enter Your First College  Ending Year" value="" required>
+                </div>
+                <input type="text" name="college_2_name" placeholder="enter Your 2nd  college Name" value="" required>
+                <input type="text" name="college_2_course_name" placeholder="enter Your 2nd  college Course Name" value="" required>
+                <!--2nd college ending-->
+
+                <!--3rd college starting -->
+                <div class="year">
+                    <input type="text" name="college_3_start_date" placeholder="enter Your First College  Starting Year" value="" required> &nbsp;&nbsp;&nbsp;
+                    <span> - </span> &nbsp;&nbsp;&nbsp;
+                    <input type="text" name="college_3_end_date" placeholder="enter Your First College  Ending Year" value="" required>
+                </div>
+                <input type="text" name="college_3_name" placeholder="enter Your 3rd  college Name" value="" required>
+                <input type="text" name="college_3_course_name" placeholder="enter Your 3rd  college Course Name" value="" required>
+                <!--3rd college ending-->
+
+
+            </div>
+            <div class="btn-box">
+                <button type="button" id="back1">Previous</button>
+                <button type="button" id="next2">Next</button>
+            </div>
+        </form>
+        <form action="./resume.php" method="post" enctype="multipart/form-data" id="form3">
+
+            <h4>Enter Your Work Experience</h4>
+            <div class="left">
+                <img src="./img/work.png" width="250" height="400" alt="">s
+            </div>
+
+            <div class="right">
+                <!--work experience 1 start part-->
+                <div class="year">
+                    <input type="text" name="work_1_start_date" placeholder="enter your 1st work starting date" value=""> &nbsp;&nbsp;&nbsp;
+                    <span> - </span> &nbsp;&nbsp;&nbsp;
+                    <input type="text" name="work_1_end_date" placeholder="enter your work experience" value="">
+                </div>
+                <input type="text" name="work_1_company" placeholder="enter your 1st working Company Name" value="">
+                <input type="text" name="work_1_role" placeholder="enter Your 1st working Job role" value="">
+                <!--work experience 1 end part-->
+                <!--work experience 2 start part-->
+                <div class="year">
+                    <input type="text" name="work_2_start_date" placeholder="enter your 2nd work starting date" value=""> &nbsp;&nbsp;&nbsp;
+                    <span> - </span> &nbsp;&nbsp;&nbsp;
+                    <input type="text" name="work_2_end_date" placeholder="enter your work experience" value="">
+                </div>
+                <input type="text" name="work_2_company" placeholder="enter your 2nd working Company Name" value="">
+                <input type="text" name="work_2_role" placeholder="enter Your 2nd working Job role" value="">
+                <!--work experience 2 end part-->
+
+
+                <!--certification start -->
+                <input type="text" name="certificate_1_date" placeholder="enter Your First certificate  Completeion Date" value="" required>
+
+
+                <input type="text" name="certificate_1_name" placeholder="enter Your 1st certificate  Name" value="" required>
+
+
+                <input type="text" name="certificate_2_date" placeholder="enter Your 2nd certificate  Completeion Date" value="" required>
+
+
+                <input type="text" name="certificate_2_name" placeholder="enter Your 2nd certificate  Name" value="" required>
+
+
+                <input type="text" name="certificate_3_date" placeholder="enter Your 3rd certificate  Completeion Date" value="" required>
+
+
+                <input type="text" name="certificate_3_name" placeholder="enter Your 3rd certificate  Name" value="" required>
+
+                <!--certification end -->
+            </div>
+
+            <div class="btn-box">
+                <button type="button" id="back2">Previous</button>
+                <button type="button" id="next3">Next</button>
+            </div>
+
+        </form>
+
+        <form action="./resume.php" method="post" enctype="multipart/form-data" id="form4">
+            <h4>Enter Your Personal Development</h4>
+            <div class="left">
+                <img src="./img/project.jpg" width="250" height="400" alt="">
+            </div>
+            <div class="right">
+                <!--1st Project starting -->
+                <input type="text" name="project_1_date" placeholder="enter Your First Project Completion Date" value="" required>
+
+                <input type="text" name="project_1_name" placeholder="enter Your 1st Project Name" value="" required>
+
+                <input type="text" name="project_1_feature" placeholder="enter Your First Project Features" value="" required>
+
+                <input type="text" name="project_1_outcome" placeholder="enter Your First Project Outcome" value="" required>
+
+                <input type="text" name="project_1_tools_used" placeholder="enter Your 1st Project Tools USed" value="" required>
+
+
+                <!--1st Project ending-->
+
+                <!--2nd Project starting -->
+
+                <input type="text" name="project_2_date" placeholder="enter Your 2nd Project Completion Date" value="" required>
+
+                <input type="text" name="project_2_name" placeholder="enter Your 2nd Project Name" value="" required>
+
+                <input type="text" name="project_2_feature" placeholder="enter Your 2nd Project Features" value="" required>
+
+                <input type="text" name="project_2_outcome" placeholder="enter Your 2nd Project Outcome" value="" required>
+
+                <input type="text" name="project_2_tools_used" placeholder="enter Your 2nd Project Tools USed" value="" required>
+
+
+                <!--2nd Project ending-->
+
+                <!--3rd Project starting -->
+
+                <input type="text" name="project_3_date" placeholder="enter Your 3rd Project Completion Date" value="" required>
+
+                <input type="text" name="project_3_name" placeholder="enter Your 3rd Project Name" value="" required>
+
+                <input type="text" name="project_3_feature" placeholder="enter Your 3rd Project Features" value="" required>
+
+                <input type="text" name="project_3_outcome" placeholder="enter Your 3rd Project Outcome" value="" required>
+
+                <input type="text" name="project_3_tools_used" placeholder="enter Your 3rd Project Tools USed" value="" required>
+                <!--3rd Project ending-->
+            </div>
+
+            <div class="btn-box">
+                <button type="button" id="back3">Previous</button>
+                <button type="button" id="next4">Next</button>
+            </div>
+
+        </form>
+
+        <form action="./resume.php" method="post" enctype="multipart/form-data" id="form5">
+            <h4>Enter Others Details</h4>
+            <div class="left">
+                <img src="./img/skills.png" width="250" height="300" alt="">
+            </div>
+            <div class="right">
+                <!--Skills starting -->
+                <input type="text" name="skills_1" placeholder="enter Your 1st Skills" value="" required>
+                <input type="text" name="skills_2" placeholder="enter Your 2nd Skills" value="" required>
+                <input type="text" name="skills_3" placeholder="enter Your 3rd Skills" value="" required>
+                <input type="text" name="skills_4" placeholder="enter Your 4th Skills" value="" required>
+                <input type="text" name="skills_5" placeholder="enter Your 5th Skills" value="" required>
+                <!--Skills ending-->
+
+                <!--Language starting -->
+                <input type="text" name="lang_1" placeholder="enter Your 1st Language" value="" required>
+                <input type="text" name="lang_2" placeholder="enter Your 2nd Language" value="" required>
+                <input type="text" name="lang_3" placeholder="enter Your 3rd Language" value="" required>
+            </div>
+            <!--Language ending-->
+
+            <div class="btn-box">
+                <button type="button" id="back4">Previous</button>
+                <button type="button" name="submit">Submit</button>
+            </div>
+
+        </form>
+
+
+
+        <dvi class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small> Step 1</small></div>
+            <div class="step-col"><small>Step 2</small></div>
+            <div class="step-col"><small>Step 3</small></div>
+            <div class="step-col"><small>Step 4</small></div>
+            <div class="step-col"><small>Step 5</small></div>
+        </dvi>
+
+
+
+
+        <script>
+            var form1 = document.getElementById("form1");
+            var form2 = document.getElementById("form2");
+            var form3 = document.getElementById("form3");
+            var form4 = document.getElementById("form4");
+            var form5 = document.getElementById("form5");
+
+            var next1 = document.getElementById("next1");
+            var next2 = document.getElementById("next2");
+            var next3 = document.getElementById("next3");
+            var next4 = document.getElementById("next4");
+
+            var back1 = document.getElementById("back1");
+            var back2 = document.getElementById("back2");
+            var back3 = document.getElementById("back3");
+            var back4 = document.getElementById("back4");
+
+
+            var progress = document.getElementById("progress");
+
+            next1.onclick = function() {
+                form1.style.left = "-810px";
+                form2.style.left = "80px";
+                progress.style.width = "300px";
+            }
+
+            back1.onclick = function() {
+                form1.style.left = "80px";
+                form2.style.left = "810px";
+                progress.style.width = "150px";
+            }
+
+            next2.onclick = function() {
+                form2.style.left = "-810px";
+                form3.style.left = "80px";
+                progress.style.width = "450px";
+            }
+            back2.onclick = function() {
+                form2.style.left = "80px";
+                form3.style.left = "810px";
+                progress.style.width = "300px";
+            }
+            next3.onclick = function() {
+                form3.style.left = "-810px";
+                form4.style.left = "80px";
+                progress.style.width = "600px";
+            }
+            back3.onclick = function() {
+                form3.style.left = "80px";
+                form4.style.left = "810px";
+                progress.style.width = "450px";
+            }
+            next4.onclick = function() {
+                form4.style.left = "-810px";
+                form5.style.left = "80px";
+                progress.style.width = "750px";
+            }
+            back4.onclick = function() {
+                form4.style.left = "80px";
+                form5.style.left = "810px";
+                progress.style.width = "600px";
+            }
+        </script>
+
+    </div>
+
+</body>
+
+</html>
